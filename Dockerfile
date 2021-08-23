@@ -8,7 +8,7 @@ FROM        python:3.9-slim
 LABEL       author="Michael Parker" maintainer="parker@pterodactyl.io"
 
 RUN         apt update \
-            && apt -y install git gcc g++ ca-certificates dnsutils curl iproute2 ffmpeg procps \
+            && apt -y install git gcc g++ ca-certificates dnsutils curl iproute2 ffmpeg procps python3-dev default-libmysqlclient-dev build-essential\
             && useradd -m -d /home/container container
 
 USER        container
